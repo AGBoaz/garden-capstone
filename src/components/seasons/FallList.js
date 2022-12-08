@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export const SummerList = () => {
+export const FallList = () => {
     const [plants, setPlants] = useState([])
 
     const localGardenUser = localStorage.getItem("garden_user")
@@ -8,7 +8,7 @@ export const SummerList = () => {
 
     useEffect(
         () => {
-            fetch (`http://localhost:8088/plants?userId=${gardenUser.id}&&seasonId=1`)
+            fetch (`http://localhost:8088/plants?userId=${gardenUser.id}&&seasonId=3`)
                 .then(res => res.json())
                 .then((plantsArray) => {
                     setPlants(plantsArray)
@@ -26,4 +26,3 @@ export const SummerList = () => {
         }
     </article>
 }
-

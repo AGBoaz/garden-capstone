@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: left;
+    background-color: aquamarine;
 }
 
 .navbar__item {
@@ -11,5 +12,10 @@
 
 .navbar__logout {
     margin-left: auto;
+}
+
+.addPlant {
+    display: flex;
+    align-content: flex-end;
 }
 
