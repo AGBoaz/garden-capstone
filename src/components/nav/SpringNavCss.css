@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    align-items: center;
+
+    background-color: #b0dcac;
+    height: 3rem;
+    border-radius: 5rem;
+}
+
+.navbar__item {
+    display: flex;
+    align-items: center;
+    flex-basis: 20%;
+    list-style-type: none;
+    background-color: #ccf3cb;
+   
+    border-radius: 2rem;
+}
+
+.navbar__logout {
+    margin-left: auto;
+}
+
+.addPlant {
+    display: flex;
+    align-content: flex-end;
+}

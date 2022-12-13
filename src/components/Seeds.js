@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
+
+let selected = ""
+export const getSelected = () => {return selected}
 
 export const Seeds = () => {
     const [seeds, setSeeds] = useState([])
+    const navigate = useNavigate()
 
     useEffect(
         () => {
@@ -9,18 +14,43 @@ export const Seeds = () => {
                 .then(res => res.json())
                 .then((seedsArray) => {
                     setSeeds(seedsArray)
-                    console.log(seedsArray)
+
                 })
         },[]
     )
 
-    return <article className="seeds">
+    let findSeedObj = (number) => {
+        for (let seed of seeds){
+            if (number === seed.id){
+                return seed
+            }
+        }
+    }
+
+    document.addEventListener(
+        "change",
+        (event) => {
+            // .name and .value come from the HTML input tag from the function below
+            if (event.target.name === "seed") {
+                 selected = findSeedObj(parseInt(event.target.value))
+
+            }
+        }
+    )
+
+    return<>
+     <article className="seeds">
         {
             seeds.map(seed => {
-                return <section >
-                    <div>Name: {seed.name}</div>
-                </section>
+                return <>
+                    <div>
+                        <input type="radio" name="seed" value={seed.id} /> {seed.name}
+                    </div>
+                </>
             })
         }
     </article>
+    <button onClick={()=> navigate("/plantForm/PlantCreate")}>Buy Seeds</button>
+    </>
 }
+

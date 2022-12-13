@@ -2,12 +2,21 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: left;
-    background-color: aquamarine;
+    align-items: center;
+
+    background-color: rgb(200, 159, 238);
+    height: 3rem;
+    border-radius: 5rem;
 }
 
 .navbar__item {
+    display: flex;
+    align-items: center;
     flex-basis: 20%;
     list-style-type: none;
+    background-color: rgb(235, 220, 248);
+   
+    border-radius: 2rem;
 }
 
 .navbar__logout {

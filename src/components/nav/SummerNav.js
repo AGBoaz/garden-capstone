@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom"
-import "./NavBar.css"
+import "./SummerNavCss.css"
+
 
 export const SummerNav = () => {
     const navigate = useNavigate()

@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom"
-import "./NavBar.css"
+import "./FallNavCss.css"
 
 export const FallNav = () => {
     const navigate = useNavigate()

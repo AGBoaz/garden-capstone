@@ -15,6 +15,9 @@ import { FallList } from "./seasons/FallList"
 import { SpringList } from "./seasons/SpringList"
 import { BuySeeds } from "./nav/BuySeeds"
 import { Seeds } from "./Seeds"
+import { PlantEdit } from "./plantForm/PlantEdit"
+import { PlantProfile } from "./plantForm/PlantProfile"
+import { PlantCreate } from "./plantForm/PlantCreate"
 
 
 export const Garden = () => {
@@ -74,10 +77,87 @@ export const Garden = () => {
 		} />
 
 
+		{/* ADDING A PLANT */}
 		<Route path="/Seeds" element={
 			<Authorized>
 				<>
 					<Seeds />
+				</>
+			</Authorized>
+		} />
+
+		<Route path="/plantForm/PlantCreate" element={
+			<Authorized>
+				<>
+					<PlantCreate />
+				</>
+			</Authorized>
+		} />
+
+
+		{/* VIEWING A PLANT PROFILE */}
+		<Route path="/seasons/SummerList/:plantId" element={
+			<Authorized>
+				<>
+					<PlantProfile />
+				</>
+			</Authorized>
+		} />
+
+		<Route path="/seasons/WinterList/:plantId" element={
+			<Authorized>
+				<>
+					<PlantProfile />
+				</>
+			</Authorized>
+		} />
+
+		<Route path="/seasons/FallList/:plantId" element={
+			<Authorized>
+				<>
+					<PlantProfile />
+				</>
+			</Authorized>
+		} />
+
+		<Route path="/seasons/SpringList/:plantId" element={
+			<Authorized>
+				<>
+					<PlantProfile />
+				</>
+			</Authorized>
+		} />
+
+
+		{/* EDITING A PLANT */}
+		<Route path="/seasons/SummerList/:plantId/edit" element={
+			<Authorized>
+				<>
+					<PlantEdit />
+				</>
+			</Authorized>
+		} />
+
+		<Route path="/seasons/WinterList/:plantId/edit" element={
+			<Authorized>
+				<>
+					<PlantEdit />
+				</>
+			</Authorized>
+		} />
+
+		<Route path="/seasons/FallList/:plantId/edit" element={
+			<Authorized>
+				<>
+					<PlantEdit />
+				</>
+			</Authorized>
+		} />
+
+		<Route path="/seasons/SpringList/:plantId/edit" element={
+			<Authorized>
+				<>
+					<PlantEdit />
 				</>
 			</Authorized>
 		} />

@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 export const WinterList = () => {
     const [plants, setPlants] = useState([])
+    const navigate = useNavigate()
 
     const localGardenUser = localStorage.getItem("garden_user")
     const gardenUser = JSON.parse(localGardenUser)
@@ -20,7 +22,7 @@ export const WinterList = () => {
         {
             plants.map(plant => {
                 return <section key={`plant--${plant.id}`}>
-                    <div>Name: {plant.name}</div>
+                    <button onClick={()=> navigate(`/seasons/WinterList/${plant.id}`)}>Name: {plant.name}</button>
                 </section>
             })
         }
