@@ -28,3 +28,32 @@
     align-content: flex-end;
 }
 
+
+
+.summerBar {
+    background-color: #FFD596 ;
+}
+.summerItem{
+    background-color: #FBEBB3 ; 
+}
+
+.winterBar {
+    background-color: #B1E3FF;
+}
+.winterItem{
+    background-color: #CBF4F7; 
+}
+
+.fallBar {
+    background-color: #FFA88C ;
+}
+.fallItem{
+    background-color: #FFCEA1 ; 
+}
+
+.springBar {
+    background-color: #b0dcac;
+}
+.springItem{
+    background-color: #ccf3cb; 
+}

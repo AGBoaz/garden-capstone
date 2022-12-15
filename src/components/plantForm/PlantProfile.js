@@ -26,6 +26,8 @@ export const PlantProfile = () => {
     },[plantId])
 
     return <>
+    {/* display plant image  */}
+    <img style={{width:"20rem", height:"18rem"}} alt="plant" src={plant.image} />
 
     {/* display plant name  */}
     <div> {plant.name} </div>

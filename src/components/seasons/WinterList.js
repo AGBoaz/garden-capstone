@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+//import daisy from "/pictures/plants/whiteFlower.png"
 
 export const WinterList = () => {
     const [plants, setPlants] = useState([])
@@ -22,7 +23,9 @@ export const WinterList = () => {
         {
             plants.map(plant => {
                 return <section key={`plant--${plant.id}`}>
-                    <button onClick={()=> navigate(`/seasons/WinterList/${plant.id}`)}>Name: {plant.name}</button>
+                    <button onClick={()=> navigate(`/seasons/WinterList/${plant.id}`)}>
+                        <img style={{width:"15rem", height:"13rem"}} alt="plant" src={plant.image} />
+                    </button>
                 </section>
             })
         }

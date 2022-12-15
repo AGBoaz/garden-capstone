@@ -33,7 +33,6 @@ export const Seeds = () => {
             // .name and .value come from the HTML input tag from the function below
             if (event.target.name === "seed") {
                  selected = findSeedObj(parseInt(event.target.value))
-
             }
         }
     )

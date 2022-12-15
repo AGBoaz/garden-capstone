@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { PlantProfile } from "../plantForm/PlantProfile"
 
 export const SummerList = () => {
     const [plants, setPlants] = useState([])
@@ -26,7 +25,9 @@ export const SummerList = () => {
         {
             plants.map(plant => {
                 return <section key={`plant--${plant.id}`}>
-                    <button onClick={()=> navigate(`/seasons/SummerList/${plant.id}`)}>Name: {plant.name}</button>
+                    <button onClick={()=> navigate(`/seasons/SummerList/${plant.id}`)}>
+                        <img style={{width:"15rem", height:"13rem"}} alt="plant" src={plant.image} />
+                    </button>
                 </section>
             })
         }

@@ -1,22 +1,22 @@
 import { Link, useNavigate } from "react-router-dom"
-import "./FallNavCss.css"
+import "./NavBar.css"
 
 export const FallNav = () => {
     const navigate = useNavigate()
 
     return (
         <>
-            <ul className="navbar">
+            <ul className="navbar fallBar">
 
-                <li className="navbar__item active">
+                <li className="navbar__item fallItem active">
                     <Link className="navbar__link" to="/seasons/WinterList">Winter</Link>
                 </li>
-                <li className="navbar__item active">
+                <li className="navbar__item fallItem active">
                     <Link className="navbar__link" to="/seasons/SpringList">Spring</Link>
                 </li>
 
 
-                <li className="navbar__item navbar__logout">
+                <li className="navbar__item fallItem navbar__logout">
                     <Link className="navbar__link" to="" onClick={() => {
                         localStorage.removeItem("garden_user")
                         navigate("/", { replace: true })

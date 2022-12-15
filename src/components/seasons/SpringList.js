@@ -22,7 +22,9 @@ export const SpringList = () => {
         {
             plants.map(plant => {
                 return <section key={`plant--${plant.id}`}>
-                    <button onClick={()=> navigate(`/seasons/SpringList/${plant.id}`)}>Name: {plant.name}</button>
+                    <button onClick={()=> navigate(`/seasons/SpringList/${plant.id}`)}>
+                        <img style={{width:"15rem", height:"13rem"}} alt="plant" src={plant.image} />
+                    </button>
                 </section>
             })
             
