@@ -65,6 +65,7 @@ export const PlantCreate = () => {
 
     return (
         <>
+        <section className="basic_edit">
             <form className="plantForm">
                 <h2 className="plantForm__title">Customise your plant</h2>
 
@@ -134,10 +135,11 @@ export const PlantCreate = () => {
 
                 <button
                     onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
-                    className="btn btn-primary">
+                    className="btns">
                     Done!
                 </button>
             </form>
+        </section>
         </>
     )
 }

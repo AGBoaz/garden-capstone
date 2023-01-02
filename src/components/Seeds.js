@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import "./Garden.css"
 
 let selected = ""
 export const getSelected = () => {return selected}
@@ -37,19 +38,23 @@ export const Seeds = () => {
         }
     )
 
-    return<>
+    return(
+    <article className="seedList">
      <article className="seeds">
         {
             seeds.map(seed => {
                 return <>
                     <div>
-                        <input type="radio" name="seed" value={seed.id} /> {seed.name}
+                        <input type="radio" name="seed" className="seed" value={seed.id} /> {seed.name}
                     </div>
                 </>
             })
         }
     </article>
-    <button onClick={()=> navigate("/plantForm/PlantCreate")}>Buy Seeds</button>
-    </>
+    
+    <button className="btns" onClick={()=> navigate("/plantForm/PlantCreate")}>Buy</button>
+   
+    </article>
+    )
 }
 

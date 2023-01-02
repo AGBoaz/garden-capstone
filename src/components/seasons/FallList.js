@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import "./Seasons.css"
 export const FallList = () => {
     const [plants, setPlants] = useState([])
@@ -19,15 +19,19 @@ export const FallList = () => {
         },[]
     )
 
-    return <article className="plants">
-        {
-            plants.map(plant => {
-                return <section className="plant" key={`plant--${plant.id}`}>
-                    <button className="btn" onClick={()=> navigate(`/seasons/FallList/${plant.id}`)}>
-                        <img className="plantPic" style={{width:"15rem", height:"13rem"}} alt="plant" src={plant.image} />
-                    </button>
-                </section>
-            })
-        }
-    </article>
+    return(
+        <body className="wholeThing fallItem">
+         <article className="plants">
+            {
+                plants.map(plant => {
+                    return <section className="plant" key={`plant--${plant.id}`}>
+                        <Link to={`/seasons/FallList/${plant.id}`}>
+                            <img style={{width:"24rem", height:"18rem"}} alt="plant" src={plant.image} />
+                        </Link>
+                    </section>
+                })
+            }
+        </article>
+        </body>
+        )
 }
