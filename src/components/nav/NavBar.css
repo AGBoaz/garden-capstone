@@ -37,6 +37,8 @@
     align-items: center;
     justify-content: center;
 
+    position:fixed;
+    display:block;
     height: 8vh;
     width: 100vw;
     z-index:999;
@@ -53,7 +55,7 @@
     align-items: center;
     display: flex;
     height: 8vh;
-    width: 8vh;
+    width: 8vw;
     border-radius: 100%;
     background-color: rgb(235, 220, 248);
 }

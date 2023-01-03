@@ -38,8 +38,11 @@ export const PlantProfile = () => {
             <h2 className="profileNameDes"> {plant.description} </h2>
 
             <div className="btnsContainer">
-                <button className ="btns" onClick={()=> navigate(`${location.pathname}/edit`)}>Edit</button>
                 <button className="btns" onClick={()=> navigate(`${location.pathname.replace(plantId, "")}`)}>Nevermind</button>
+
+                <button className ="btns" >Water</button>
+
+                <button className ="btns" onClick={()=> navigate(`${location.pathname}/edit`)}>Edit</button>
             </div>
         </div>
 

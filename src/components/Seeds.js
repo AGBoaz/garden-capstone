@@ -51,9 +51,8 @@ export const Seeds = () => {
             })
         }
     </article>
-    
+
     <button className="btns" onClick={()=> navigate("/plantForm/PlantCreate")}>Buy</button>
-   
     </article>
     )
 }

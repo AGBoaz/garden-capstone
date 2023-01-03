@@ -1,22 +1,23 @@
 .plant{
     display: flex;
-    
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     padding: 10rem;
-
+    border-radius: 100%;
 }
 
 .plants{
     display: flex;
     flex-wrap: wrap;
-
     width:90vw;
+    
 }
 
 .wholeThing{
     background-color: rgb(235, 220, 248);
 
-    height: 92vh;
+    padding-top: 2vh;
+    height: 90vh;
     width: 100vw;
    
 }
