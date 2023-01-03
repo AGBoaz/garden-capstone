@@ -26,6 +26,43 @@ export const PlantProfile = () => {
             })
     },[plantId])
 
+    const waterPlant = () =>{
+
+        let waterCount = plant.watered
+        waterCount ++
+
+        fetch(`http://localhost:8088/plants/${plantId}`,{
+            method: 'PATCH',
+            body: JSON.stringify({
+                watered: waterCount,
+            }),
+            headers: {
+                "Content-Type": "application/json"
+            }
+            })
+        .then (response => response.json())
+        .then((data) => {
+            setPlant(data)
+        })
+
+        if (plant.watered === 2){
+            fetch(`http://localhost:8088/plants/${plantId}`,{
+            method: 'PATCH',
+            body: JSON.stringify({
+                image: plant.evolved
+            }),
+            headers: {
+                "Content-Type": "application/json"
+            }
+            })
+        .then (response => response.json())
+        .then((data) => {
+            setPlant(data)
+        })
+        }
+    }
+
+
     return <>
     <section className="basic_profile">
 
@@ -40,7 +77,7 @@ export const PlantProfile = () => {
             <div className="btnsContainer">
                 <button className="btns" onClick={()=> navigate(`${location.pathname.replace(plantId, "")}`)}>Nevermind</button>
 
-                <button className ="btns" >Water</button>
+                <button className ="btns" onClick={()=> waterPlant()}>Water</button>
 
                 <button className ="btns" onClick={()=> navigate(`${location.pathname}/edit`)}>Edit</button>
             </div>

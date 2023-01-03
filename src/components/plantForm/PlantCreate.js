@@ -31,7 +31,8 @@ export const PlantCreate = () => {
         seasonId: 1,
         watered: 0,
         userId: 0,
-        image: seed.plantImage
+        image: seed.plantImage,
+        evolved: seed.evolvedImage
     })
 
     const handleSaveButtonClick = (event) => {
@@ -45,8 +46,9 @@ export const PlantCreate = () => {
             seasonId: plant.seasonId,
             watered: 0,
             userId: gardenUserObj.id,
-            image: seed.plantImage
-        }
+            image: seed.plantImage,
+            evolved: seed.evolvedImage
+    }
 
 
         // TODO: Perform the fetch() to POST the object to the API
