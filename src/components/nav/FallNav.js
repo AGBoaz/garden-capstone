@@ -1,3 +1,6 @@
+// This file holds the top navigation bar for the "fall" page. The user can navigate to the "winter" or "spring" pages 
+// from the "fall" page. The user may also click "logout".
+
 import { Link, useNavigate } from "react-router-dom"
 import "./NavBar.css"
 
