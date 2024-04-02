@@ -15,6 +15,7 @@ fieldset {
     display: inline-block;
     margin: 0 auto;
     text-align: left;
+    background-color: bisque;
 }
 
 .form--login > fieldset > input[type="email"] {
@@ -46,6 +47,7 @@ fieldset {
 .container--login {
     text-align: center;
     background-color: bisque;
+    height: 100vh;
     
 }
 

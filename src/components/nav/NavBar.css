@@ -1,31 +1,63 @@
+
+.dontMove{
+    position:fixed;
+    display:block;
+    width: 100vw;
+    z-index:999;
+}
 .navbar {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: left;
     align-items: center;
+    justify-content: center;
 
     background-color: rgb(200, 159, 238);
-    height: 3rem;
-    border-radius: 5rem;
+    height: 8vh;
+   
 }
 
 .navbar__item {
-    display: flex;
+    justify-content: center;
     align-items: center;
+    display: flex;
     flex-basis: 20%;
     list-style-type: none;
-    background-color: rgb(235, 220, 248);
-   
+    height: 2.5rem;
     border-radius: 2rem;
+    background-color: rgb(235, 220, 248);
 }
 
 .navbar__logout {
     margin-left: auto;
 }
 
+
+.lowbar{
+    background-color: rgb(200, 159, 238);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    position:fixed;
+    display:block;
+    height: 8vh;
+    width: 100vw;
+    z-index:999;
+}
 .addPlant {
     display: flex;
-    align-content: flex-end;
+    align-content: center;
+    background-color: rgb(200, 159, 238);
+    justify-content: center;
+   
+}
+.addPlantContainer{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 8vh;
+    width: 8vw;
+    border-radius: 100%;
+    background-color: rgb(235, 220, 248);
 }
 
 
@@ -57,3 +89,4 @@
 .springItem{
     background-color: #ccf3cb; 
 }
+

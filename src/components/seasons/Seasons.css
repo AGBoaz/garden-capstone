@@ -1,0 +1,52 @@
+.plant{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem;
+    border-radius: 100%;
+}
+
+.plants{
+    display: flex;
+    flex-wrap: wrap;
+    width:90vw;
+    
+}
+
+.wholeThing{
+    background-color: rgb(235, 220, 248);
+
+    padding-top: 2vh;
+    height: 90vh;
+    width: 100vw;
+   
+}
+
+
+.summerBar {
+    background-color: #FFD596 ;
+}
+.summerItem{
+    background-color: #FBEBB3 ; 
+}
+
+.winterBar {
+    background-color: #B1E3FF;
+}
+.winterItem{
+    background-color: #CBF4F7; 
+}
+
+.fallBar {
+    background-color: #FFA88C ;
+}
+.fallItem{
+    background-color: #FFCEA1 ; 
+}
+
+.springBar {
+    background-color: #b0dcac;
+}
+.springItem{
+    background-color: #ccf3cb; 
+}

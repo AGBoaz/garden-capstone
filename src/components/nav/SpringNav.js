@@ -9,10 +9,14 @@ export const SpringNav = () => {
 
     return (
         <>
+         <section className="dontMove">
             <ul className="navbar springBar">
 
                 <li className="navbar__item springItem active">
                     <Link className="navbar__link" to="/seasons/FallList">Fall</Link>
+                </li>
+                <li>
+                    <h1>Spring</h1>
                 </li>
                 <li className="navbar__item springItem active">
                     <Link className="navbar__link" to="/seasons/SummerList">Summer</Link>
@@ -25,6 +29,7 @@ export const SpringNav = () => {
                     }}>Logout</Link>
                 </li>
             </ul>
+        </section>
         </>
     )
 }

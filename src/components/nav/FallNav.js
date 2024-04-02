@@ -9,6 +9,7 @@ export const FallNav = () => {
 
     return (
         <>
+         <section className="dontMove">
             <ul className="navbar fallBar">
 
                 <li className="navbar__item fallItem active">
@@ -26,6 +27,7 @@ export const FallNav = () => {
                     }}>Logout</Link>
                 </li>
             </ul>
+            </section>
         </>
     )
 }

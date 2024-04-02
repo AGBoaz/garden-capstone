@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useLocation, useNavigate, useParams } from "react-router-dom"
+import "./plantInfo.css"
 
 export const PlantProfile = () => {
 
@@ -25,21 +26,64 @@ export const PlantProfile = () => {
             })
     },[plantId])
 
+    const waterPlant = () =>{
+
+        let waterCount = plant.watered
+        waterCount ++
+
+        fetch(`http://localhost:8088/plants/${plantId}`,{
+            method: 'PATCH',
+            body: JSON.stringify({
+                watered: waterCount,
+            }),
+            headers: {
+                "Content-Type": "application/json"
+            }
+            })
+        .then (response => response.json())
+        .then((data) => {
+            setPlant(data)
+        })
+
+        if (plant.watered === 2){
+            fetch(`http://localhost:8088/plants/${plantId}`,{
+            method: 'PATCH',
+            body: JSON.stringify({
+                image: plant.evolved
+            }),
+            headers: {
+                "Content-Type": "application/json"
+            }
+            })
+        .then (response => response.json())
+        .then((data) => {
+            setPlant(data)
+        })
+        }
+    }
+
+
     return <>
-    {/* display plant image  */}
-    <img style={{width:"20rem", height:"18rem"}} alt="plant" src={plant.image} />
+    <section className="basic_profile">
 
-    {/* display plant name  */}
-    <div> {plant.name} </div>
+        <div className="plantImgContainer">
+            <img className="img"  alt="plant" src={plant.image} />
+        </div>
 
-    {/* display plant description  */}
-    <div> {plant.description} </div>
+        <div className="plantText">
+            <h1 className="profileNameDes"> {plant.name} </h1>
+            <h2 className="profileNameDes"> {plant.description} </h2>
 
-    {/* edit button */}
-    <button onClick={()=> navigate(`${location.pathname}/edit`)}>Edit</button>
-    <button onClick={()=> navigate(`${location.pathname.replace(plantId, "")}`)}>Nevermind</button>
+            <div className="btnsContainer">
+                <button className="btns" onClick={()=> navigate(`${location.pathname.replace(plantId, "")}`)}>Nevermind</button>
 
+                <button className ="btns" onClick={()=> waterPlant()}>Water</button>
 
+                <button className ="btns" onClick={()=> navigate(`${location.pathname}/edit`)}>Edit</button>
+            </div>
+        </div>
+
+    </section>
     </>
 
 }

@@ -9,6 +9,8 @@ export const WinterNav = () => {
 
     return (
         <>
+        <section className="dontMove">
+
             <ul className="navbar winterBar">
 
                 <li className="navbar__item winterItem active">
@@ -25,6 +27,7 @@ export const WinterNav = () => {
                     }}>Logout</Link>
                 </li>
             </ul>
+        </section>
         </>
     )
 }

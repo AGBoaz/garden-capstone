@@ -10,6 +10,7 @@ export const SummerNav = () => {
 
     return (
         <>
+        <section className="dontMove">
             <ul className="navbar summerBar">
 
                 <li className="navbar__item summerItem active">
@@ -26,6 +27,7 @@ export const SummerNav = () => {
                     }}>Logout</Link>
                 </li>
             </ul>
+            </section>
         </>
     )
 }
