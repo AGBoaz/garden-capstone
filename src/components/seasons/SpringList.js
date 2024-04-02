@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 export const SpringList = () => {
     const [plants, setPlants] = useState([])
@@ -18,16 +18,19 @@ export const SpringList = () => {
         },[]
     )
 
-    return <article className="plants">
-        {
-            plants.map(plant => {
-                return <section key={`plant--${plant.id}`}>
-                    <button onClick={()=> navigate(`/seasons/SpringList/${plant.id}`)}>
-                        <img style={{width:"15rem", height:"13rem"}} alt="plant" src={plant.image} />
-                    </button>
-                </section>
-            })
-            
-        }
-    </article>
+    return(
+        <body className="wholeThing springItem">
+        <article className="plants">
+            {
+                plants.map(plant => {
+                    return <section className="plant" key={`plant--${plant.id}`}>
+                        <Link to={`/seasons/SpringList/${plant.id}`}>
+                            <img style={{width:"24rem", height:"18rem"}} alt="plant" src={plant.image} />
+                        </Link>
+                    </section>
+                })
+            }
+        </article>
+        </body>
+        )
 }

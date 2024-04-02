@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useLocation, useNavigate, useParams } from "react-router-dom"
+import "./plantInfo.css"
 
 export const PlantEdit = () => {
 
@@ -77,7 +78,9 @@ export const PlantEdit = () => {
 
 
     return <>
-            <form className="plantForm">
+        <section className="basic_edit">
+
+            <form className="plantText">
                 <h2 className="plantForm__title">Edit your plant</h2>
 
 
@@ -122,7 +125,7 @@ export const PlantEdit = () => {
                 {/*SEASON ID*/}
                 <fieldset>
                     <div className="form-group">
-                        {seasons.map(season => {
+                        {seasons.map (season => {
                             return <>
                                 <div>
                                     <input type="radio" name="seasonId" value={season.id}
@@ -143,15 +146,16 @@ export const PlantEdit = () => {
 
                 <button
                     onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
-                    className="btn btn-primary">
+                    className="btns">
                     Done!
                 </button>
 
                 <button
                     onClick={(clickEvent) => handleDeleteButtonClick(clickEvent)}
-                    className="delete-btn">
+                    className="btns">
                     Delete
                 </button>
             </form>
+        </section>
         </>
 }

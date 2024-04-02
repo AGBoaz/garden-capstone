@@ -39,9 +39,10 @@ export const Garden = () => {
 		<Route path="/seasons/SummerList" element={
 			<Authorized>
 				<>
-					<SummerNav />
+					<SummerNav /> 
 					<SummerList />
 					<BuySeeds />
+					
 				</>
 			</Authorized>
 		} />
@@ -81,6 +82,7 @@ export const Garden = () => {
 		<Route path="/Seeds" element={
 			<Authorized>
 				<>
+					<NavBar/>
 					<Seeds />
 				</>
 			</Authorized>
@@ -89,6 +91,7 @@ export const Garden = () => {
 		<Route path="/plantForm/PlantCreate" element={
 			<Authorized>
 				<>
+					<NavBar/>
 					<PlantCreate />
 				</>
 			</Authorized>
@@ -99,6 +102,7 @@ export const Garden = () => {
 		<Route path="/seasons/SummerList/:plantId" element={
 			<Authorized>
 				<>
+					<NavBar/>
 					<PlantProfile />
 				</>
 			</Authorized>
@@ -107,6 +111,7 @@ export const Garden = () => {
 		<Route path="/seasons/WinterList/:plantId" element={
 			<Authorized>
 				<>
+					<NavBar/>
 					<PlantProfile />
 				</>
 			</Authorized>
@@ -115,6 +120,7 @@ export const Garden = () => {
 		<Route path="/seasons/FallList/:plantId" element={
 			<Authorized>
 				<>
+					<NavBar/>
 					<PlantProfile />
 				</>
 			</Authorized>
@@ -123,6 +129,7 @@ export const Garden = () => {
 		<Route path="/seasons/SpringList/:plantId" element={
 			<Authorized>
 				<>
+					<NavBar/>
 					<PlantProfile />
 				</>
 			</Authorized>
@@ -133,6 +140,7 @@ export const Garden = () => {
 		<Route path="/seasons/SummerList/:plantId/edit" element={
 			<Authorized>
 				<>
+					<NavBar/>
 					<PlantEdit />
 				</>
 			</Authorized>
@@ -141,6 +149,7 @@ export const Garden = () => {
 		<Route path="/seasons/WinterList/:plantId/edit" element={
 			<Authorized>
 				<>
+					<NavBar/>
 					<PlantEdit />
 				</>
 			</Authorized>
@@ -149,6 +158,7 @@ export const Garden = () => {
 		<Route path="/seasons/FallList/:plantId/edit" element={
 			<Authorized>
 				<>
+					<NavBar/>
 					<PlantEdit />
 				</>
 			</Authorized>
@@ -157,6 +167,7 @@ export const Garden = () => {
 		<Route path="/seasons/SpringList/:plantId/edit" element={
 			<Authorized>
 				<>
+					<NavBar/>
 					<PlantEdit />
 				</>
 			</Authorized>

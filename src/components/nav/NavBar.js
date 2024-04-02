@@ -15,9 +15,7 @@ export const NavBar = () => {
                 </li>
             </ul>
 
-            <footer className="addPlant">
-                <Link className="addPlant__link" to="/Seeds">Buy Seeds</Link>
-            </footer>
+            
         </>
     )
 }

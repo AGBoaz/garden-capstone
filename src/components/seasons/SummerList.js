@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import "./seasons.css"
 
 export const SummerList = () => {
     const [plants, setPlants] = useState([])
@@ -21,16 +22,20 @@ export const SummerList = () => {
     )
 
 
-    return <article className="plants">
+    return(
+    <body className="wholeThing summerItem">
+    <article className="plants">
         {
             plants.map(plant => {
-                return <section key={`plant--${plant.id}`}>
-                    <button onClick={()=> navigate(`/seasons/SummerList/${plant.id}`)}>
-                        <img style={{width:"15rem", height:"13rem"}} alt="plant" src={plant.image} />
-                    </button>
+                return <section className="plant" key={`plant--${plant.id}`}>
+                    <Link to={`/seasons/SummerList/${plant.id}`}>
+                        <img style={{width:"24rem", height:"18rem"}} alt="plant" src={plant.image} />
+                    </Link>
                 </section>
             })
         }
     </article>
+    </body>
+    )
 }
 

@@ -1,24 +1,31 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import "./Garden.css"
 
 let selected = ""
 export const getSelected = () => {return selected}
 
 export const Seeds = () => {
+    //important variables
     const [seeds, setSeeds] = useState([])
+    let regSeeds = []
+    let mysterySeeds= []
+
     const navigate = useNavigate()
 
+    //get the seeds from the database
     useEffect(
         () => {
             fetch (`http://localhost:8088/seeds`)
                 .then(res => res.json())
                 .then((seedsArray) => {
                     setSeeds(seedsArray)
-
                 })
         },[]
     )
 
+
+    //24-40  find the selected seed object
     let findSeedObj = (number) => {
         for (let seed of seeds){
             if (number === seed.id){
@@ -26,7 +33,6 @@ export const Seeds = () => {
             }
         }
     }
-
     document.addEventListener(
         "change",
         (event) => {
@@ -36,20 +42,25 @@ export const Seeds = () => {
             }
         }
     )
+   
 
-    return<>
+    return(
+    <article className="seedList">
      <article className="seeds">
         {
             seeds.map(seed => {
-                return <>
+                    return <>
                     <div>
-                        <input type="radio" name="seed" value={seed.id} /> {seed.name}
+                        <input type="radio" name="seed" className="seed" value={seed.id} /> {seed.name}
                     </div>
                 </>
+                
             })
         }
     </article>
-    <button onClick={()=> navigate("/plantForm/PlantCreate")}>Buy Seeds</button>
-    </>
+
+    <button className="btns" onClick={()=> navigate("/plantForm/PlantCreate")}>Buy</button>
+    </article>
+    )
 }
 

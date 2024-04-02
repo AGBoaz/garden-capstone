@@ -21,7 +21,7 @@ export const WinterList = () => {
 
     return(
         <body className="wholeThing winterItem">
-        <article className="plants">
+         <article className="plants">
             {
                 plants.map(plant => {
                     return <section className="plant" key={`plant--${plant.id}`}>
