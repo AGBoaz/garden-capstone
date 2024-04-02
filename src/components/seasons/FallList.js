@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react"
-
+import { useNavigate } from "react-router-dom"
+import "./Seasons.css"
 export const FallList = () => {
     const [plants, setPlants] = useState([])
+    const navigate = useNavigate()
+
 
     const localGardenUser = localStorage.getItem("garden_user")
     const gardenUser = JSON.parse(localGardenUser)
@@ -19,8 +22,10 @@ export const FallList = () => {
     return <article className="plants">
         {
             plants.map(plant => {
-                return <section key={`plant--${plant.id}`}>
-                    <div>Name: {plant.name}</div>
+                return <section className="plant" key={`plant--${plant.id}`}>
+                    <button className="btn" onClick={()=> navigate(`/seasons/FallList/${plant.id}`)}>
+                        <img className="plantPic" style={{width:"15rem", height:"13rem"}} alt="plant" src={plant.image} />
+                    </button>
                 </section>
             })
         }

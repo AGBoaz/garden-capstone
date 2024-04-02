@@ -5,8 +5,6 @@ import "./Login.css"
 export const Register = (props) => {
     const [user, setUser] = useState({
         email: "",
-        fullName: "",
-        isStaff: false
     })
     let navigate = useNavigate()
 
@@ -21,12 +19,11 @@ export const Register = (props) => {
             .then(res => res.json())
             .then(createdUser => {
                 if (createdUser.hasOwnProperty("id")) {
-                    localStorage.setItem("kandy_user", JSON.stringify({
+                    localStorage.setItem("garden_user", JSON.stringify({
                         id: createdUser.id,
-                        staff: createdUser.isStaff
                     }))
 
-                    navigate("/")
+                    navigate("/seasons/SummerList")
                 }
             })
     }
@@ -56,27 +53,12 @@ export const Register = (props) => {
     return (
         <main style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register for Kandy Korner</h1>
-                <fieldset>
-                    <label htmlFor="fullName"> Full Name </label>
-                    <input onChange={updateUser}
-                           type="text" id="fullName" className="form-control"
-                           placeholder="Enter your name" required autoFocus />
-                </fieldset>
+                <h1 className="h3 mb-3 font-weight-normal">Please Register for a Garden</h1>
                 <fieldset>
                     <label htmlFor="email"> Email address </label>
                     <input onChange={updateUser}
                         type="email" id="email" className="form-control"
                         placeholder="Email address" required />
-                </fieldset>
-                <fieldset>
-                    <input onChange={(evt) => {
-                        const copy = {...user}
-                        copy.isStaff = evt.target.checked
-                        setUser(copy)
-                    }}
-                        type="checkbox" id="isStaff" />
-                    <label htmlFor="email"> I am an employee </label>
                 </fieldset>
                 <fieldset>
                     <button type="submit"> Register </button>

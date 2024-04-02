@@ -9,16 +9,16 @@ export const SpringNav = () => {
 
     return (
         <>
-            <ul className="navbar">
+            <ul className="navbar springBar">
 
-                <li className="navbar__item active">
+                <li className="navbar__item springItem active">
                     <Link className="navbar__link" to="/seasons/FallList">Fall</Link>
                 </li>
-                <li className="navbar__item active">
+                <li className="navbar__item springItem active">
                     <Link className="navbar__link" to="/seasons/SummerList">Summer</Link>
                 </li>
 
-                <li className="navbar__item navbar__logout">
+                <li className="navbar__item springItem navbar__logout">
                     <Link className="navbar__link" to="" onClick={() => {
                         localStorage.removeItem("garden_user")
                         navigate("/", { replace: true })

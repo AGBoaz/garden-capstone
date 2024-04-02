@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 export const SpringList = () => {
     const [plants, setPlants] = useState([])
+    const navigate = useNavigate()
 
     const localGardenUser = localStorage.getItem("garden_user")
     const gardenUser = JSON.parse(localGardenUser)
@@ -20,9 +22,12 @@ export const SpringList = () => {
         {
             plants.map(plant => {
                 return <section key={`plant--${plant.id}`}>
-                    <div>Name: {plant.name}</div>
+                    <button onClick={()=> navigate(`/seasons/SpringList/${plant.id}`)}>
+                        <img style={{width:"15rem", height:"13rem"}} alt="plant" src={plant.image} />
+                    </button>
                 </section>
             })
+            
         }
     </article>
 }

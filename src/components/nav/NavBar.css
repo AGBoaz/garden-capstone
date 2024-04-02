@@ -2,12 +2,21 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: left;
-    background-color: aquamarine;
+    align-items: center;
+
+    background-color: rgb(200, 159, 238);
+    height: 3rem;
+    border-radius: 5rem;
 }
 
 .navbar__item {
+    display: flex;
+    align-items: center;
     flex-basis: 20%;
     list-style-type: none;
+    background-color: rgb(235, 220, 248);
+   
+    border-radius: 2rem;
 }
 
 .navbar__logout {
@@ -19,3 +28,32 @@
     align-content: flex-end;
 }
 
+
+
+.summerBar {
+    background-color: #FFD596 ;
+}
+.summerItem{
+    background-color: #FBEBB3 ; 
+}
+
+.winterBar {
+    background-color: #B1E3FF;
+}
+.winterItem{
+    background-color: #CBF4F7; 
+}
+
+.fallBar {
+    background-color: #FFA88C ;
+}
+.fallItem{
+    background-color: #FFCEA1 ; 
+}
+
+.springBar {
+    background-color: #b0dcac;
+}
+.springItem{
+    background-color: #ccf3cb; 
+}

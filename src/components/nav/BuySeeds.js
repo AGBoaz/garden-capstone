@@ -2,6 +2,7 @@
 // the user will be directed to a new page where they can buy new seeds for their garden.
 
 import { Link } from "react-router-dom"
+import "./NavBar.css"
 
 export const BuySeeds= () => {
 
