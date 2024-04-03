@@ -1,19 +1,266 @@
 {
-  "posts": [
+  "users": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "email": "yordog.iscool@gmail.com"
+    },
+    {
+      "id": 2,
+      "email": "yurdad.iscooler@yahoo.com"
+    },
+    {
+      "email": "gabagoo@gmail.com",
+      "id": 3
+    },
+    {
+      "email": "veryrealEmail@gmail.com",
+      "id": 4
+    },
+    {
+      "email": "zoinksScoob@gmail.com",
+      "id": 5
+    },
+    {
+      "email": "howdy@partner.com",
+      "id": 6
     }
   ],
-  "comments": [
+  "seasons": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "summer"
+    },
+    {
+      "id": 2,
+      "name": "winter"
+    },
+    {
+      "id": 3,
+      "name": "fall"
+    },
+    {
+      "id": 4,
+      "name": "spring"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "seeds": [
+    {
+      "id": 1,
+      "type": "daisy",
+      "name": "daisy",
+      "description": "mom's favorite",
+      "image": "",
+      "plantImage": "../../pictures/plants/daisy-outlined.png",
+      "evolvedImage": "../../pictures/plants/daisy-evolved.png",
+      "isMystery": false
+    },
+    {
+      "id": 2,
+      "type": "tulip",
+      "name": "tulip",
+      "description": "pretty. safe. basic.",
+      "image": "",
+      "plantImage": "../../pictures/plants/tulip.png",
+      "evolvedImage": "../../pictures/plants/tulips-evolved.png",
+      "isMystery": false
+    },
+    {
+      "id": 3,
+      "type": "aloe",
+      "name": "aloe",
+      "description": "a gooy green substance. +2 healing",
+      "image": "",
+      "plantImage": "../../pictures/plants/aloe-plant-outlined.png",
+      "evolvedImage": "../../pictures/plants/aloe-evolved.png",
+      "isMystery": false
+    },
+    {
+      "id": 4,
+      "type": "pink",
+      "name": "pink",
+      "description": "Just a flower, nothing to see here",
+      "image": "",
+      "plantImage": "../../pictures/plants/pink-flower.png",
+      "evolvedImage": "../../pictures/plants/pink-flower-evolved.png",
+      "isMystery": false
+    }
+  ],
+  "plants": [
+    {
+      "name": "tulip",
+      "description": "pretty. safe. basic.",
+      "type": "tulip",
+      "seasonId": "2",
+      "watered": 3,
+      "userId": 1,
+      "image": "../../pictures/plants/tulips-evolved.png",
+      "evolved": "../../pictures/plants/tulips-evolved.png",
+      "id": 6
+    },
+    {
+      "name": "tulip",
+      "description": "pretty. safe. basic.",
+      "type": "tulip",
+      "seasonId": "4",
+      "watered": 3,
+      "userId": 1,
+      "image": "../../pictures/plants/tulips-evolved.png",
+      "evolved": "../../pictures/plants/tulips-evolved.png",
+      "id": 7
+    },
+    {
+      "name": "daisy",
+      "description": "mom's favorite",
+      "type": "daisy",
+      "seasonId": "4",
+      "watered": 3,
+      "userId": 1,
+      "image": "../../pictures/plants/daisy-evolved.png",
+      "evolved": "../../pictures/plants/daisy-evolved.png",
+      "id": 8
+    },
+    {
+      "name": "daisy",
+      "description": "mom's favorite",
+      "type": "daisy",
+      "seasonId": "3",
+      "watered": 0,
+      "userId": 1,
+      "image": "../../pictures/plants/daisy-outlined.png",
+      "evolved": "../../pictures/plants/daisy-evolved.png",
+      "id": 10
+    },
+    {
+      "name": "aloe",
+      "description": "a gooy green substance. +2 healing",
+      "type": "aloe",
+      "seasonId": "3",
+      "watered": 3,
+      "userId": 1,
+      "image": "../../pictures/plants/aloe-evolved.png",
+      "evolved": "../../pictures/plants/aloe-evolved.png",
+      "id": 11
+    },
+    {
+      "name": "coolest guy",
+      "description": "woah, look at him gooooo",
+      "type": "daisy",
+      "seasonId": "1",
+      "watered": 3,
+      "userId": 2,
+      "image": "../../pictures/plants/daisy-evolved.png",
+      "evolved": "../../pictures/plants/daisy-evolved.png",
+      "id": 14
+    },
+    {
+      "name": "bear",
+      "description": "mom's favorite",
+      "type": "daisy",
+      "seasonId": "2",
+      "watered": 3,
+      "userId": 1,
+      "image": "../../pictures/plants/daisy-evolved.png",
+      "evolved": "../../pictures/plants/daisy-evolved.png",
+      "id": 15
+    },
+    {
+      "name": "pink",
+      "description": "Just a flower, nothing to see here",
+      "type": "pink",
+      "seasonId": "4",
+      "watered": 3,
+      "userId": 1,
+      "image": "../../pictures/plants/pink-flower-evolved.png",
+      "evolved": "../../pictures/plants/pink-flower-evolved.png",
+      "id": 20
+    },
+    {
+      "name": "daisy",
+      "description": "mom's favorite",
+      "type": "daisy",
+      "seasonId": "2",
+      "watered": 0,
+      "userId": 1,
+      "image": "../../pictures/plants/daisy-outlined.png",
+      "evolved": "../../pictures/plants/daisy-evolved.png",
+      "id": 22
+    },
+    {
+      "name": "daisy",
+      "description": "mom's favorite",
+      "type": "daisy",
+      "seasonId": "1",
+      "watered": 0,
+      "userId": 1,
+      "image": "../../pictures/plants/daisy-outlined.png",
+      "evolved": "../../pictures/plants/daisy-evolved.png",
+      "id": 23
+    },
+    {
+      "name": "tulip",
+      "description": "pretty. safe. basic.",
+      "type": "tulip",
+      "seasonId": 1,
+      "watered": 3,
+      "userId": 1,
+      "image": "../../pictures/plants/tulips-evolved.png",
+      "evolved": "../../pictures/plants/tulips-evolved.png",
+      "id": 24
+    },
+    {
+      "name": "pink",
+      "description": "Just a flower, nothing to see here",
+      "type": "pink",
+      "seasonId": "1",
+      "watered": 3,
+      "userId": 1,
+      "image": "../../pictures/plants/pink-flower-evolved.png",
+      "evolved": "../../pictures/plants/pink-flower-evolved.png",
+      "id": 26
+    },
+    {
+      "name": "daisy",
+      "description": "mom's favorite",
+      "type": "daisy",
+      "seasonId": 1,
+      "watered": 0,
+      "userId": 6,
+      "image": "../../pictures/plants/daisy-outlined.png",
+      "evolved": "../../pictures/plants/daisy-evolved.png",
+      "id": 27
+    },
+    {
+      "name": "daisy",
+      "description": "mom's favorite",
+      "type": "daisy",
+      "seasonId": "4",
+      "watered": 0,
+      "userId": 1,
+      "image": "../../pictures/plants/daisy-outlined.png",
+      "evolved": "../../pictures/plants/daisy-evolved.png",
+      "id": 28
+    },
+    {
+      "name": "tulip",
+      "description": "pretty. safe. basic.",
+      "type": "tulip",
+      "seasonId": "2",
+      "watered": 3,
+      "userId": 6,
+      "image": "../../pictures/plants/tulips-evolved.png",
+      "evolved": "../../pictures/plants/tulips-evolved.png",
+      "id": 29
+    },
+    {
+      "name": "pink",
+      "description": "Just a flower, nothing to see here",
+      "type": "pink",
+      "seasonId": "4",
+      "watered": 3,
+      "userId": 6,
+      "image": "../../pictures/plants/pink-flower-evolved.png",
+      "evolved": "../../pictures/plants/pink-flower-evolved.png",
+      "id": 30
+    }
+  ]
 }
