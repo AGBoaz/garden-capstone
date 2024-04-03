@@ -1,15 +1,18 @@
 # Garden Capstone Project
 A basic CRUD application. The user can create, update and delete plant objects, or navigate to a plant's profile to read about it. 
-The frontend is written with javascript react and the backend uses a JSON database.
+The frontend is written with javascript react, styled with css, and the backend uses a JSON database.
 
 # Installation Instructions:
 clone the repository in the desired location on your computer
-ensure the Garden database is running
-    json-server -p 8088 database.json
-Launch the front end
-    npm start
+Launch the database from the main branch using: 
 
-# Documentation:
+    json-server -p 8088 database.json
+    
+Launch the front end using:
+
+    npm start 
+
+## Documentation:
 Database Diagram:
 https://dbdiagram.io/d/Digital-Garden-6389201ebae3ed7c45442e55 
 
