@@ -20,7 +20,7 @@ export const SpringList = () => {
 
     return(
         <body className="wholeThing springItem">
-         <article className="plants">
+        <article className="plants">
             {
                 plants.map(plant => {
                     return <section className="plant" key={`plant--${plant.id}`}>
